@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .oModel {
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #000;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .oModel.success {
+      background-color: green;
+      color: #fff;
+    }
+    .oModel.error {
+      background-color: red;
+      color: #fff;
+    }
+    .oModel.primary {
+      background-color: blue;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="btn-group">
+      <button data-status="S">
+        成功
+      </button>
+      <button data-status="E">
+        失败
+      </button>
+      <button data-status="P">
+        默认
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="oModel">
+      标题
+    </div>
+  </main>
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
