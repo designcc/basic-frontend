@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #my-tab {
+      width: 500px;
+      height: 500px;
+      margin: 50 auto;
+      border: 1px solid #000;
+    }
+    .tab-wrapper {
+      height: 50px;
+      border-bottom: 1px solid #000;
+    }
+    .tab-item {
+      float: left;
+      width: 33.33%;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .tab-item.current {
+      background-color: #000;
+      color: #fff;
+    }
+    .page-wrapper {
+      height: 450px;
+      position: relative;
+    }
+    .page-item {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 450px;
+      text-align: center;
+      line-height: 450px;
+    }
+    .page-item.current {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="my-tab" data='[
+    {
+      "title": "Tab 1",
+      "content": "Content 1"
+    },
+    {
+      "title": "Tab 2",
+      "content": "Content 2"
+    },
+    {
+      "title": "Tab 3",
+      "content": "Content 3"
+    }
+  ]'></div>
+  <script src="./tpl.js"></script>
+  <script src="./utils.js"></script>
+  <script src="./index.js"></script>
+  <script>
+    const myTab = new MyTab('#my-tab');
+  </script>
+</body>
+</html>
